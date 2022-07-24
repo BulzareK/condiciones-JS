@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/estilos2.css" />
+    <title>STICKERS</title>
+  </head>
+  <body>
+    <h1>LLEVA TU STICKER</h1>
+    <div class="container">
+      <div class="card">
+        <img src="./assets/img/sticker1.png" alt="" />
+        <input type="text" id="input01" />
+      </div>
+      <div class="card">
+        <img src="./assets/img/sticker2.png" alt="" />
+        <input type="text" id="input02" />
+      </div>
+      <div class="card">
+        <img src="./assets/img/sticker3.png" alt="" />
+        <input type="text" id="input03" />
+      </div>
+    </div>
+    <div class="footer">
+      <p id="par">Recuerda que no puedes llevar más de 10</p>
+      <button onclick="verificar()">VERIFICAR</button>
+    </div>
+    <div class="ejercicios">
+      <a href="./index.html" class="button">Ir al ejercicio Nº 1</a>
+      <a href="./index3.html" class="button">Ir al ejercicio Nº 3</a>
+    </div>
+    <script>
+      function verificar() {
+        input01 = document.querySelector("#input01").value;
+        input02 = document.querySelector("#input02").value;
+        input03 = document.querySelector("#input03").value;
+        par = document.querySelector("#par");
+        sumaInputs = Number(input01) + Number(input02) + Number(input03);
+        console.log("suma", sumaInputs);
+        if (sumaInputs <= 10) {
+          par.innerHTML = "Llevas " + sumaInputs + " stickers.";
+        } else {
+          par.innerHTML = "Llevas demasiados stickers.";
+        }
+      }
+    </script>
+  </body>
+</html>

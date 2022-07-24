@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/estilos3.css" />
+    <title>STICKERS</title>
+  </head>
+  <body>
+    <div class="container">
+      <select name="" id="select01">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <select name="" id="select02">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <select name="" id="select03">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <button onclick="password()">INGRESAR</button>
+      <p id="par">¿Son correctos tus passwords?</p>
+    </div>
+    <div class="ejercicios">
+      <a href="./index.html"> <b> Ir al ejercicio Nº 1</b></a>
+      <a href="./index2.html"> <b> Ir al ejercicio Nº 2</b></a>
+    </div>
+    <script>
+      function password() {
+        select01 = document.querySelector("#select01").value;
+        select02 = document.querySelector("#select02").value;
+        select03 = document.querySelector("#select03").value;
+        par = document.querySelector("#par");
+        if (select01 == 9 && select02 == 1 && select03 == 1) {
+          par.innerHTML = "password 1 correcto 👍";
+        } else if (select01 == 7 && select02 == 1 && select03 == 4) {
+          par.innerHTML = "password 2 correcto ✌";
+        } else {
+          par.innerHTML = "password incorrecto ❌";
+        }
+      }
+    </script>
+  </body>
+</html>
